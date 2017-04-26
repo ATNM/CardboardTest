@@ -30,6 +30,6 @@ public class MoveIfNeeded : MonoBehaviour {
 
 	void Move() {
 		isMoving = true;
-		transform.Translate (camera.transform.forward * Time.deltaTime * speed);
+		GetComponent<CharacterController>().Move(camera.transform.forward * Time.deltaTime * speed);
 	}
 }
